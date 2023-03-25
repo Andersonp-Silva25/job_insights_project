@@ -41,7 +41,7 @@ def filter_by_industry(jobs: List[Dict], industry: str) -> List[Dict]:
     list
         List of jobs with provided industry
     """
-    filter_indystry = [
+    filter_industry = [
         job_type for job_type in jobs if job_type['industry'] == industry
     ]
-    return filter_indystry
+    return filter_industry
