@@ -106,4 +106,11 @@ def filter_by_salary_range(
     list
         Jobs whose salary range contains `salary`
     """
-    raise NotImplementedError
+    validating_work_salaries = []
+    for job in jobs:
+        try:
+            if matches_salary_range(job, salary):
+                validating_work_salaries.append(job)
+        except ValueError:
+            print("Invalid Job")
+    return validating_work_salaries
